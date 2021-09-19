@@ -6,7 +6,6 @@ import dotenv from "dotenv";
 import mongooseLoader from "./loaders/mongoose";
 import AppError from "./errors/AppError";
 import errorHandler from "./errors/errorHandler";
-import seedDB from "./middlewares/validators";
 import routes from "./routes";
 
 dotenv.config();
@@ -15,9 +14,6 @@ const app = express();
 
 //Mongoose Connection
 await mongooseLoader.connectMongoose();
-
-// Seed the Database
-seedDB();
 
 //Middlewares
 app.use(express.json());
