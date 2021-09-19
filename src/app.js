@@ -7,13 +7,17 @@ import mongooseLoader from "./loaders/mongoose";
 import AppError from "./errors/AppError";
 import errorHandler from "./errors/errorHandler";
 import routes from "./routes";
+import seedDatabase from './loaders/seed';
 
 dotenv.config();
 
 const app = express();
 
 //Mongoose Connection
-await mongooseLoader.connectMongoose();
+mongooseLoader.connectMongoose();
+
+//Seed DB
+seedDatabase();
 
 //Middlewares
 app.use(express.json());

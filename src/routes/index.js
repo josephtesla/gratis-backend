@@ -5,6 +5,6 @@ import postsRoutes from './posts';
 const router = express.Router();
 
 router.use("/posts", postsRoutes);
-router.user("/comments", commentsRoutes);
+router.use("/comments", commentsRoutes);
 
 export default router;

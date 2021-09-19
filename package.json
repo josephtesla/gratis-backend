@@ -7,7 +7,8 @@
     "start": "node build/bin/server.js",
     "dev": "nodemon --exec babel-node src/bin/server.js",
     "build": "babel src --out-dir build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "test": "set NODE_ENV=test && mocha src/test/**/*.js --require @babel/register --timeout 100000 --recursive --exit"
   },
   "repository": {
     "type": "git",
@@ -23,17 +24,23 @@
     "@babel/cli": "*",
     "@babel/core": "*",
     "@babel/node": "*",
+    "@babel/plugin-transform-runtime": "^7.15.0",
     "@babel/preset-env": "*",
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
     "eslint": "*",
     "eslint-config-airbnb": "*",
     "eslint-config-prettier": "*",
     "eslint-plugin-import": "*",
     "eslint-plugin-prettier": "*",
+    "mocha": "^9.1.1",
     "nodemon": "*",
     "prettier": "*"
   },
   "dependencies": {
     "@babel/polyfill": "*",
+    "@babel/register": "^7.15.3",
+    "@babel/runtime": "^7.15.4",
     "body-parser": "*",
     "cookie-parser": "*",
     "cors": "*",

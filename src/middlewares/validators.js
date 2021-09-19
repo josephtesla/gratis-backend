@@ -17,13 +17,17 @@ const schemas = {
     }),
   }),
 
-  updatePostValidator: {
+  updatePostValidator: Joi.object({
     title: Joi.string().min(3).messages({
       "string.min": "title must contain at least 3 characters !",
     }),
-  },
 
-  createCommentValidator: {
+    body: Joi.string().min(3).messages({
+      "string.min": "body must contain at least 3 characters !",
+    }),
+  }),
+
+  createCommentValidator: Joi.object({
     authorName: Joi.string().required().min(3).messages({
       "string.min": "authorName must contain at least 3 characters !",
       "any.required": "authorName is required !"
@@ -32,7 +36,7 @@ const schemas = {
     commentMessage: Joi.string().required().messages({
       "any.required": "commentMessage is required !"
     }),
-  },
+  }),
 }
 
 export default schemas;

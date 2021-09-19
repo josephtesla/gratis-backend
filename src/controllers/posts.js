@@ -128,10 +128,9 @@ export const updateBlogPost = async (req, res, next) => {
 
     const { title, body } = req.body;
     const updates = {};
-    if (title) updates[title] = title;
-    if (body) updates[body] = body;
-
-    const updatedDoc = await BlogPost.findByIdAndUpdate(postId, updates);
+    if (title) blogPost.title = title;
+    if (body) blogPost.body = body;
+    const updatedDoc = await blogPost.save();
     return successResponse(res, 200, "blog post updated successfully!", updatedDoc);
   } catch (error){
     return next(error);

@@ -3,10 +3,11 @@ import logger from './logger';
 
 require('dotenv').config();
 
-const mongoURI =
-  process.env.NODE_ENV !== 'development'
-    ? process.env.MONGO_URI_PROD
-    : process.env.MONGO_URI_TEST;
+const environment = String(process.env.NODE_ENV).trim();
+const mongoURI = environment === "development" ? process.env.MONGO_URI_DEV:
+  environment === "test" ? process.env.MONGO_URI_TEST: process.env.MONGO_URI_PROD;
+
+console.log(environment, mongoURI);
 
 class MongooseLoader {
   static connectMongoose = async () => {

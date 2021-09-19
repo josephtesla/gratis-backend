@@ -17,7 +17,7 @@ router.post("/", joiMiddleware(schemas.createPostValidator), createBlogPost);
 router.get("/", getAllBlogPosts)
 router.get("/paginated", getAllBlogPostsPaginated);
 router.get("/:postId", getPostById);
-router.put("/:postId",  joiMiddleware(schemas.createPostValidator), updateBlogPost);
-router.delete(":/postId", deletePost);
+router.put("/:postId",  joiMiddleware(schemas.updatePostValidator), updateBlogPost);
+router.delete("/:postId", deletePost);
 
 export default router;

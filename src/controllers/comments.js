@@ -93,8 +93,8 @@ export const updateComment = async (req, res, next) => {
 
     const { commentMessage } = req.body;
     const updates = {};
-    if (commentMessage) updates[commentMessage] = commentMessage;
-    const updatedDoc = await Comment.findByIdAndUpdate(commentId, updates);
+    if (commentMessage) comment.commentMessage = commentMessage;
+    const updatedDoc = await comment.save();
     return successResponse(res, 200, "comment updated successfully!", updatedDoc);
   } catch (error){
     return next(error);
