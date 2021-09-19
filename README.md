@@ -28,13 +28,13 @@ The following tools will be needed to run this application successfully:
 - Run `npm test` from the root directory to run test cases.
 
 ## Live Hosted Demo
--  Navigate to [https://blog-backend-gratis.herokuapp.com/api/v1/](https://blog-backend-gratis.herokuapp.com/api/v1/posts) to deployed api
+-  Navigate to [https://blog-backend-gratis.herokuapp.com/api/v1/](https://blog-backend-gratis.herokuapp.com/api/v1/posts) to test deployed api
 
 ## Built With
 - [Node.js](http://www.nodejs.org/) - Runtime Environment
 - [Express.js](https://expressjs.com) - Backend Framework
 - [MongoDB](https://mongodb.com) - Database Engine
-- [Mocha, Chai] - Unit Testing Frameworks and Libraries.
+- [Mocha, Chai](https://www.digitalocean.com/community/tutorials/test-a-node-restful-api-with-mocha-and-chai) - Unit Testing Framework and Library.
 
 ## Additional Info
 - Project architecture is based on the Model-View-Controller (MVC) Pattern
