@@ -13,9 +13,9 @@ The following tools will be needed to run this application successfully:
 ## Installation and Setup
 
 **On your Local Machine**
-
+- Run `git clone https://github.com/josephtesla/gratis-backend.git` to clone the repo to your directory
 - Create a MongoDB Database for the App
-- Create a `.env` file and modify the content based on the `.env.sample` file
+- Create a `.env` file in the root and modify the content based on the `.env.sample` file
 - Run `npm install` to install all dependencies
 - Run `npm run dev` to start the app on development mode.
 - Access endpoints on `http://localhost:5000/api/v1`
