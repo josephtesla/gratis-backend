@@ -1,0 +1,49 @@
+{
+  "name": "gratis-backend",
+  "version": "1.0.0",
+  "description": "API repository for backend assessment",
+  "main": "index.js",
+  "scripts": {
+    "start": "node build/bin/server.js",
+    "dev": "nodemon --exec babel-node src/bin/server.js",
+    "build": "babel src --out-dir build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephtesla/gratis-backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josephtesla/gratis-backend/issues"
+  },
+  "homepage": "https://github.com/josephtesla/gratis-backend#readme",
+  "devDependencies": {
+    "@babel/cli": "*",
+    "@babel/core": "*",
+    "@babel/node": "*",
+    "@babel/preset-env": "*",
+    "eslint": "*",
+    "eslint-config-airbnb": "*",
+    "eslint-config-prettier": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-prettier": "*",
+    "nodemon": "*",
+    "prettier": "*"
+  },
+  "dependencies": {
+    "@babel/polyfill": "*",
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "cors": "*",
+    "dotenv": "*",
+    "express": "*",
+    "joi": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "morgan": "*",
+    "validator": "*",
+    "winston": "*"
+  }
+}
