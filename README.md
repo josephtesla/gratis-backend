@@ -31,6 +31,7 @@ The following tools will be needed to run this application successfully:
 -  Navigate to [https://blog-backend-gratis.herokuapp.com/api/v1/](https://blog-backend-gratis.herokuapp.com/api/v1/posts) to test deployed api
 
 ## Built With
+- [JavaScript + Babel] - Language and ES6 transpiler
 - [Node.js](http://www.nodejs.org/) - Runtime Environment
 - [Express.js](https://expressjs.com) - Backend Framework
 - [MongoDB](https://mongodb.com) - Database Engine
